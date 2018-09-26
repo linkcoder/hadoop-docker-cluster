@@ -1,0 +1,43 @@
+version: '2'
+services:
+    spark-master:
+        image: spark
+        container_name: spark-master
+        ports:
+            - "7077:7077"
+            - "8080:8080"
+        volumes:
+            - "./work:/root/works"
+        hostname: spark-master
+        networks:
+            - hadoop
+        tty: true
+     
+    spark-slave1:
+        image: spark
+        container_name: spark-slave1
+        hostname: spark-slave1
+        networks:
+            - hadoop
+        tty: true
+    
+    spark-slave2:
+        image: spark
+        container_name: spark-slave2
+        hostname: spark-slave2
+        networks:
+            - hadoop
+        tty: true
+        
+    spark-slave3:
+        image: spark
+        container_name: spark-slave3
+        hostname: spark-slave3
+        networks:
+            - hadoop
+        tty: true
+
+networks:
+    hadoop:
+        external:
+            name: hadoop

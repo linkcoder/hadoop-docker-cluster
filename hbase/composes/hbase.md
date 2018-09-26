@@ -1,0 +1,1 @@
+hbase-1.2.6-bin.tar.gz

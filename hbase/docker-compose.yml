@@ -1,0 +1,40 @@
+version: '2'
+services:
+    hbase-master:
+        image: hbase
+        container_name: hbase-master
+        ports: 
+            - "16010:16010"
+        hostname: hbase-master.hadoop
+        networks:
+            - hadoop 
+        tty: true
+
+    hbase-slave1:
+        image: hbase
+        container_name: hbase-slave1
+        hostname: hbase-slave1.hadoop
+        networks:
+            - hadoop
+        tty: true
+        
+    hbase-slave2:
+        image: hbase
+        container_name: hbase-slave2
+        hostname: hbase-slave2.hadoop
+        networks:
+            - hadoop
+        tty: true
+    
+    hbase-slave3:
+        image: hbase
+        container_name: hbase-slave3
+        hostname: hbase-slave3.hadoop
+        networks:
+            - hadoop
+        tty: true
+        
+networks:
+    hadoop:
+        external:
+            name: hadoop

@@ -1,0 +1,18 @@
+所有不是xml的文件，都建议使用dos2unix转换一下格式，
+具体工具可以使用yum -y install dos2unix安装
+
+1.安装了centos7-jdk8镜像
+解决了环境变量文件的导入问题
+
+2.安装了hadoop集群
+解决了echo环境变量的追加问题
+基于centos7-jdk8镜像创建hadoop镜像
+
+3.安装了zk，解决了myid问题
+挂载myid文件
+自动重启zk
+基于centos7-jdk8配置zk镜像
+
+4.安装hbase
+基于centos7-jdk8配置hbase镜像
+要十分注意hbase的主机名，建议不要跟原来一样
