@@ -13,6 +13,7 @@
     
     spark:https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.3.2/spark-2.3.2-bin-hadoop2.7.tgz
     
+    note：yum install -y dos2unix（使用这个来转换文件格式，如果是unix系统就不用了，如果文件从Windows传入，则需要使用这个转换）
 
 ### **2.准备工作**
     
