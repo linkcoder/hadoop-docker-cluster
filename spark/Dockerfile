@@ -15,12 +15,12 @@ RUN chmod 600 /root/.ssh/config && \
     chown root:root /root/.ssh/config
 
 #复制spark安装包
-COPY $COMPOSE_DIR/spark-2.3.2-bin-hadoop2.7.tgz /root/
+COPY $COMPOSE_DIR/spark-2.3.0-bin-hadoop2.7.tgz /root/
 
 #安装spark
-RUN tar -zxvf /root/spark-2.3.2-bin-hadoop2.7.tgz -C /root/ && \
-	mv /root/spark-2.3.2-bin-hadoop2.7 $SPARK_HOME && \
-	rm /root/spark-2.3.2-bin-hadoop2.7.tgz
+RUN tar -zxvf /root/spark-2.3.0-bin-hadoop2.7.tgz -C /root/ && \
+	mv /root/spark-2.3.0-bin-hadoop2.7 $SPARK_HOME && \
+	rm /root/spark-2.3.0-bin-hadoop2.7.tgz
 
 #配置环境变量
 RUN echo "export SPARK_HOME=$SPARK_HOME" >> /root/.bashrc && \

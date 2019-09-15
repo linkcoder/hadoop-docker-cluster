@@ -11,9 +11,9 @@ ENV ZK_HOME=/root/zookeeper
 COPY $COMPOSE_DIR/* /root/
 
 #安装zk
-RUN tar -zxvf /root/zookeeper-3.4.13.tar.gz -C /root/ && \
-	mv /root/zookeeper-3.4.13 $ZK_HOME && \
-	rm /root/zookeeper-3.4.13.tar.gz
+RUN tar -zxvf /root/zookeeper-3.4.10.tar.gz -C /root/ && \
+	mv /root/zookeeper-3.4.10 $ZK_HOME && \
+	rm /root/zookeeper-3.4.10.tar.gz
 	
 #创建环境变量
 RUN echo "export ZK_HOME=$ZK_HOME" >> /root/.bashrc && \

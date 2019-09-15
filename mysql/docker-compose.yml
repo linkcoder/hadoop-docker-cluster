@@ -1,0 +1,25 @@
+version: '2'
+services:
+    mysql:
+        image: mysql:5.7
+        restart: always
+        container_name: mysql
+        hostname: mysql
+        volumes: 
+            - "./data:/var/lib/mysql"
+        ports: 
+            - 3306:3306
+        environment: 
+            MYSQL_ROOT_PASSWORD: hive_mysql
+        networks:
+            hadoop:
+                aliases:
+                    - mysql
+        tty: true
+
+    
+        
+networks:
+    hadoop:
+        external:
+            name: hadoop

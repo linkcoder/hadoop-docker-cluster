@@ -7,7 +7,7 @@ services:
             - "50070:50070"
             - "8088:8088"
         volumes:
-            - "./work:/root/works"
+            - "/root/namenode:/root/hdfs/namenode"
         hostname: hadoop-master
         networks:
             - hadoop
@@ -17,7 +17,7 @@ services:
         image: hadoop
         container_name: hadoop-slave1
         volumes: 
-            - "/root/work:/root/works"
+            - "/root/datanode-1:/root/hdfs/datanode"
         hostname: hadoop-slave1
         networks:
             - hadoop
@@ -27,7 +27,7 @@ services:
         image: hadoop
         container_name: hadoop-slave2
         volumes: 
-            - "/root/work:/root/works"
+            - "/root/datanode-2:/root/hdfs/datanode"
         hostname: hadoop-slave2
         networks:
             - hadoop
@@ -37,7 +37,7 @@ services:
         image: hadoop
         container_name: hadoop-slave3
         volumes: 
-            - "/root/work:/root/works"
+            - "/root/datanode-3:/root/hdfs/datanode"
         hostname: hadoop-slave3
         networks:
             - hadoop

@@ -1,7 +1,7 @@
 version: '2'
 services:
     hive-s1:
-        image: hadoop
+        image: hive
         container_name: hive-s1
         hostname: hive-s1
         networks:

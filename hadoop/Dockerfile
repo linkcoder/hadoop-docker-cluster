@@ -11,11 +11,11 @@ ENV HADOOP_HOME=/root/hadoop
 ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop/
 
 #安装hadoop
-COPY $COMPOSE_DIR/hadoop-2.9.0.tar.gz /root/
+COPY $COMPOSE_DIR/hadoop-2.7.6.tar.gz /root/
 
-RUN tar -zxvf /root/hadoop-2.9.0.tar.gz -C /root/ && \
-	mv /root/hadoop-2.9.0 $HADOOP_HOME && \
-	rm /root/hadoop-2.9.0.tar.gz && \
+RUN tar -zxvf /root/hadoop-2.7.6.tar.gz -C /root/ && \
+	mv /root/hadoop-2.7.6 $HADOOP_HOME && \
+	rm /root/hadoop-2.7.6.tar.gz && \
 	rm $HADOOP_HOME/bin/*.cmd && \
 	rm $HADOOP_HOME/sbin/*.cmd
 
