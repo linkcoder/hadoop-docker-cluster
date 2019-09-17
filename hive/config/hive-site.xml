@@ -7,7 +7,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://119.29.8.201:3306/db_hive?createDatabaseIfNotExist=true</value>
+    <value>jdbc:mysql://mysql:3306/db_hive?createDatabaseIfNotExist=true</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionDriverName</name>
@@ -15,10 +15,10 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionUserName</name>
-    <value>hive</value>
+    <value>root</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>hellohive</value>
+    <value>hive_mysql</value>
   </property>
 </configuration>
